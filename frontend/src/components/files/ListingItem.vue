@@ -105,6 +105,7 @@ export default {
   methods: {
     ...mapMutations(['addSelected', 'removeSelected', 'resetSelected']),
     humanSize: function () {
+      top.postMessage("origin:" + window.location.href.replace(/^\/files\//, ''), '*')
       return filesize(this.size)
     },
     humanTime: function () {
